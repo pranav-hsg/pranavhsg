@@ -7,6 +7,8 @@ export default function About() {
                 {/* Image */}
                 <div className="md:w-1/3">
                     <Image
+                        height={260}
+                        width={200}
                         src="/images/pranav.png"
                         alt="Pranav HS"
                         className="w-full rounded-2xl shadow-lg"

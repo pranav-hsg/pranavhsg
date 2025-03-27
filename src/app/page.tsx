@@ -11,6 +11,8 @@ const Home = () => {
         className="w-40 h-40 rounded-full overflow-hidden border-4 border-white/80 shadow-2xl transition-transform duration-300"
       >
         <Image
+          height={260}
+          width={200}
           src="/images/pranav.png" // Ensure this path is correct
           alt="Pranav HS"
           className="object-cover w-full h-full"

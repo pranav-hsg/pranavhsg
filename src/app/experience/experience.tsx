@@ -4,18 +4,44 @@ export default function Experience() {
             company: "Sensei Technologies",
             role: "Full Stack Developer",
             duration: "April 2022 - Present",
-            date: "Apr 2022",
+            date: "Present",
             description: "Developed 10+ end-to-end CRUD screens using Spring Boot and Angular. Optimized API performance, engineered a WhatsApp notification system, and contributed to Spring Data JPA.",
             techStack: ["Java", "Spring Boot", "Angular", "MySQL", "Docker"],
         },
+        {
+            company: "Maven Central",
+            role: "Open Source",
+            duration: "January 2024",
+            date: "Jan 2024",
+            description: "Published a Java library to Maven Central, simplifying Excel row-to-Java bean conversion, streamlining sheet generation, eliminating manual index updates, and improving data processing efficiency, resulting in positive community recognition.",
+            techStack: ["Java"]
+        }
+        ,
         {
             company: "Open Source",
             role: "Contributor - Spring Data JPA",
             duration: "June 2023",
             date: "Jun 2023",
-            description: "Investigated query optimization, fixed count query generation issues, and contributed code to the Spring Data JPA repository.",
+            description: "Optimized count query generation logic, improving query execution speed by over 30% across the application, and earned formal recognition as an official contributor.",
             techStack: ["Java", "Spring Data", "Hibernate"],
         },
+        {
+            "company": "Open Source - NPM",
+            "role": "AutoGapSlider - NPM Package",
+            "duration": "March 2022",
+            "date": "Mar 2022",
+            "description": "Developed & Published to NPM, a zero-dependency, mobile-responsive React slider that automatically adjusts gaps between slides according to the viewport. Achieved a total of 300+ downloads.",
+            "techStack": ["React", "JavaScript", "NPM"]
+        }, {
+            "company": "Personal Project",
+            "role": "Web Developer",
+            "duration": "May 2020",
+            "date": "May 8, 2020",
+            "description": "Built my very own first website and published it to GitHub using HTML and CSS, gaining hands-on experience in web development.",
+            "techStack": ["HTML", "CSS", "GitHub"]
+        }
+
+
     ];
 
     return (
