@@ -1,22 +1,45 @@
 "use client";
 
 import { useState } from "react";
+import emailjs from "@emailjs/browser";
 
 export default function Contact() {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
     const [submitted, setSubmitted] = useState(false);
+    const [loading, setLoading] = useState(false);
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
 
-    const handleSubmit = (e: React.FormEvent) => {
+    const handleSubmit = async (e: React.FormEvent) => {
         e.preventDefault();
-        setSubmitted(true);
+        setLoading(true);
+
+        const serviceId = "service_t5y689o";
+        const templateId = "template_eiflgtk";
+        const publicKey = "zQVVOCWEhxS593T_K";
+
+        const templateParams = {
+            from_name: formData.name,
+            from_email: formData.email,
+            message: formData.message,
+            title: 'Regarding Contact me'
+        };
+
+        try {
+            await emailjs.send(serviceId, templateId, templateParams, publicKey);
+            setSubmitted(true);
+        } catch (error) {
+            console.error("EmailJS error:", error);
+            alert("Failed to send the message. Please try again later.");
+        } finally {
+            setLoading(false);
+        }
     };
 
     return (
-        <section className="min-h-screen bg-gray-100 flex items-center justify-center py-16">
+        <section className="min-h-screen bg-gray-100 flex items-center justify-center">
             <div className="container mx-auto px-6 lg:w-1/2 bg-white shadow-md rounded-2xl p-8">
                 <h1 className="text-4xl font-bold text-primary text-center">Contact Me</h1>
                 <p className="text-gray-600 text-center mt-2">Feel free to reach out. I’ll get back to you as soon as possible.</p>
@@ -58,8 +81,9 @@ export default function Contact() {
                         <button
                             type="submit"
                             className="w-full bg-primary text-white py-3 rounded-lg hover:bg-primary-dark transition"
+                            disabled={loading}
                         >
-                            Send Message
+                            {loading ? "Sending..." : "Send Message"}
                         </button>
                     </form>
                 )}

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react"; // Icon library for menu and close icons
+import { div } from "framer-motion/client";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
@@ -12,13 +13,14 @@ export default function Header() {
         { name: "Projects", path: "/projects" },
         { name: "Experience", path: "/experience" },
         { name: "Skills", path: "/skills" },
-        { name: "Blog", path: "/blog" },
+        // { name: "Blog", path: "/blog" },
         { name: "Contact", path: "/contact" },
-        { name: "Testimonials", path: "/testimonials" },
-        { name: "Resume", path: "/resume" },
+        // { name: "Testimonials", path: "/testimonials" },
+        // { name: "Resume", path: "/resume" },
     ];
 
-    return (
+    return (<>
+        <div className="mt-10">&nbsp;</div>
         <header className="w-full bg-white shadow-md fixed top-0 left-0 right-0 z-50">
             <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
                 {/* Logo */}
@@ -68,5 +70,6 @@ export default function Header() {
                 </ul>
             </div>
         </header>
+    </>
     );
 }

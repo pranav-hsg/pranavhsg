@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @import "tw-animate-css";
 
-@custom-variant dark (&:is(.dark *));
-
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
@@ -145,4 +143,24 @@ body * {
   /* Define your primary text color */
   --color-text-secondary: #e0e0e0;
   /* Define your secondary text color */
+}
+
+.skill-badge {
+  @apply bg-white/10 text-white px-4 py-2 rounded-full shadow-md font-semibold text-sm backdrop-blur-md hover:bg-white/20 transition-all duration-300 transform hover:scale-105;
+}
+
+.project-card {
+  @apply transition-all duration-300 transform hover:scale-103 hover:shadow-xl;
+}
+
+
+
+@layer components {
+  .good {
+    background-color: red;
+  }
+
+  .cta-btn {
+    @apply bg-white/10 text-white hover:bg-white/20 border-white/20 px-6 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center gap-2 transform hover:scale-105
+  }
 }

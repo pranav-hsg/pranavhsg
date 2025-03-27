@@ -21,7 +21,7 @@ export default function Testimonials() {
     ];
 
     return (
-        <section className="min-h-screen bg-gray-100 flex items-center justify-center py-16">
+        <section className="min-h-screen bg-gray-100 good flex items-center justify-center py-16">
             <div className="container mx-auto px-6">
                 <h1 className="text-4xl font-bold text-primary text-center">What People Say</h1>
                 <p className="text-gray-600 text-center mt-2">Here’s what my clients and colleagues have to say.</p>
