@@ -1,34 +1,59 @@
-export default function Home() {
+import React from 'react';
+import { Github, Linkedin } from 'lucide-react'; // Import icons
+
+const Home = () => {
+
   return (
-    <div className="bg-gradient-to-r from-primary to-secondary min-h-screen flex flex-col justify-center items-center text-center text-white p-6">
+    <div className=" flex flex-col justify-center items-center text-center bg-white p-6">
       {/* Profile Image */}
-      <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-white shadow-lg transition-transform duration-300 hover:scale-105">
-        <img src="/images/pranav.png" alt="Pranav HS" className="object-cover w-full h-full" />
+      <div
+        className="w-40 h-40 rounded-full overflow-hidden border-4 border-white/80 shadow-2xl transition-transform duration-300"
+      >
+        <img
+          src="/images/pranav.png" // Ensure this path is correct
+          alt="Pranav HS"
+          className="object-cover w-full h-full"
+        />
       </div>
 
       {/* Name & Description */}
-      <h1 className="text-5xl font-bold mt-6 animate-fade-in">Pranav HS</h1>
-      <p className="mt-4 text-xl max-w-lg text-gray-200 leading-relaxed animate-fade-in">
-        Self-taught Full Stack Web Developer with a drive for innovation and a thirst for quick learning.
+      <h1
+        className="text-5xl font-bold mt-8 text-gray-900 tracking-tight text-primary" // Changed text color
+      >
+        Pranav HS
+      </h1>
+      <p
+        className="mt-6 text-xl max-w-2xl text-gray-700 leading-relaxed"  // Changed text color
+      >
+        Self-taught Full Stack Web Developer with a passion for creating innovative and user-friendly web applications.  I enjoy tackling new challenges and am always eager to expand my skillset.
       </p>
 
       {/* Call-to-Action Buttons */}
-      <div className="mt-8 flex gap-4">
+      <div className="mt-10 flex gap-6">
         <a
           href="https://linkedin.com/in/pranav-hsg"
           target="_blank"
-          className="px-6 py-2 bg-white text-primary font-semibold rounded-full shadow-lg hover:bg-gray-200 transition-all"
+          rel="noopener noreferrer"
+          className=" px-8 py-3 bg-primary text-white font-semibold rounded-full shadow-lg transition-all duration-300 flex items-center gap-2
+    hover:bg-blue-600 hover:shadow-xl"
         >
+          <Linkedin className="w-5 h-5" />
           LinkedIn
         </a>
         <a
           href="https://github.com/pranav-hsg"
           target="_blank"
-          className="px-6 py-2 bg-white text-primary font-semibold rounded-full shadow-lg hover:bg-gray-200 transition-all"
+          rel="noopener noreferrer"
+          className=" px-8 py-3 bg-primary text-white font-semibold rounded-full shadow-lg transition-all duration-300 flex items-center gap-2
+    hover:bg-blue-600 hover:shadow-xl"
         >
+          <Github className="w-5 h-5" />
           GitHub
         </a>
       </div>
+
     </div>
   );
-}
+};
+
+export default Home;

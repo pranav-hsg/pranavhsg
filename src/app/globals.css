@@ -135,14 +135,14 @@ body * {
 }
 
 @theme {
-  --color-primary: #6f00ff;
-  /* Define your primary color */
-  --color-secondary: #ff00ff;
-  /* Define your secondary color */
-  --color-text-primary: #ffffff;
-  /* Define your primary text color */
-  --color-text-secondary: #e0e0e0;
-  /* Define your secondary text color */
+  --color-primary: #007bff;
+  /* A brighter blue, often used for primary actions */
+  --color-secondary: #6c757d;
+  /* A medium gray, good for secondary elements */
+  --color-text-primary: #212529;
+  /* Very dark gray, almost black, for main text */
+  --color-text-secondary: #666666;
+  /* A lighter gray for less important text */
 }
 
 .skill-badge {

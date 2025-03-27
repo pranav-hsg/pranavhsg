@@ -22,7 +22,7 @@ export default function Skills() {
                         <h3 className="text-xl font-semibold text-primary">{category}</h3>
                         <div className="mt-4 flex flex-wrap gap-3">
                             {items.map((skill, i) => (
-                                <span key={i} className="bg-primary text-white px-4 py-2 rounded-lg text-sm">
+                                <span key={i} className="bg-primary text-white px-3 py-1 rounded-lg text-sm">
                                     {skill}
                                 </span>
                             ))}

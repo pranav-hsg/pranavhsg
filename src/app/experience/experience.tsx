@@ -46,7 +46,7 @@ export default function Experience() {
                             <div className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-0 h-0 border-8 border-transparent ${index % 2 === 0 ? "md:-left-4 border-r-primary" : "md:-right-4 border-l-primary"}`}></div>
 
                             <h3 className="text-xl font-semibold text-gray-800">
-                                {role} - <span className="text-primary">{company}</span>
+                                {role} - <span className="text-gray-600">{company}</span>
                             </h3>
                             <p className="text-gray-500 text-sm mt-1">{duration}</p>
                             <p className="mt-2 text-gray-600">{description}</p>
