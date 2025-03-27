@@ -1,5 +1,6 @@
 import React from 'react';
 import { Github, Linkedin } from 'lucide-react'; // Import icons
+import Image from 'next/image';
 
 const Home = () => {
 
@@ -9,7 +10,7 @@ const Home = () => {
       <div
         className="w-40 h-40 rounded-full overflow-hidden border-4 border-white/80 shadow-2xl transition-transform duration-300"
       >
-        <img
+        <Image
           src="/images/pranav.png" // Ensure this path is correct
           alt="Pranav HS"
           className="object-cover w-full h-full"

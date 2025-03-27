@@ -1,5 +1,5 @@
 import Experience from "./experience";
 
-export default function () {
+export default function ExperiencePage() {
     return <Experience />
 }

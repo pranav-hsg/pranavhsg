@@ -1,5 +1,5 @@
 import Projects from "./projects";
 
-export default function () {
+export default function ProjectsPage() {
     return <><Projects /></>
 }

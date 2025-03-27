@@ -1,5 +1,5 @@
 import Blog from "./blog";
 
-export default function () {
+export default function BlogPage() {
     return <Blog></Blog>
 }

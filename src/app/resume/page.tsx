@@ -1,5 +1,5 @@
 import Resume from "./resume";
 
-export default function () {
+export default function ResumePage() {
     return <Resume></Resume>
 }

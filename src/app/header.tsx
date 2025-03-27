@@ -3,7 +3,6 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react"; // Icon library for menu and close icons
-import { div } from "framer-motion/client";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);

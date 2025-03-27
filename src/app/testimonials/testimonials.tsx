@@ -1,3 +1,5 @@
+import Image from "next/image";
+
 export default function Testimonials() {
     const testimonials = [
         {
@@ -32,7 +34,7 @@ export default function Testimonials() {
                             key={index}
                             className="bg-white shadow-lg rounded-2xl p-6 max-w-md flex flex-col items-center text-center"
                         >
-                            <img
+                            <Image
                                 src={image}
                                 alt={name}
                                 className="w-16 h-16 rounded-full object-cover mb-4 border-2 border-primary"
