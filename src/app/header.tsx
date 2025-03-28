@@ -3,9 +3,12 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react"; // Icon library for menu and close icons
+import { useActivePath } from "@/utils/useActivePath";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
+    const isPathActive = useActivePath()
+    console.log(isPathActive("/home"))
     const links = [
         { name: "Home", path: "/" },
         { name: "About", path: "/about" },
@@ -31,7 +34,7 @@ export default function Header() {
                 <ul className="hidden md:flex space-x-6">
                     {links.map(({ name, path }) => (
                         <li key={path}>
-                            <Link href={path} className="text-gray-700 hover:text-blue-500 font-medium">
+                            <Link href={path} className={` hover:text-blue-500 font-medium ${isPathActive(path) ? 'text-blue-500 ' : 'text-gray-700'}`}>
                                 {name}
                             </Link>
                         </li>
@@ -59,7 +62,7 @@ export default function Header() {
                         <li key={path}>
                             <Link
                                 href={path}
-                                className="block text-gray-700 hover:text-blue-500 font-medium py-2"
+                                className={`block  hover:text-blue-500 font-medium py-2 ${isPathActive(path) ? 'text-blue-500 ' : 'text-gray-700'}`}
                                 onClick={() => setIsOpen(false)}
                             >
                                 {name}

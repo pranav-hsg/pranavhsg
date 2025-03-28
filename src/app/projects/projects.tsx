@@ -27,11 +27,11 @@ export default function Projects() {
                 <p className="text-gray-600 text-center mt-2">A showcase of my open-source contributions and innovative work.</p>
 
                 {/* Project Cards */}
-                <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                <div className=" mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className={`p-6 rounded-2xl shadow-lg 
+                            className={`p-6 rounded-2xl shadow-lg bg-white/10 backdrop-blur-2xl border border-white/20   
                                 }`}
                         >
                             <h2 className="text-2xl font-semibold text-primary">{project.title}</h2>

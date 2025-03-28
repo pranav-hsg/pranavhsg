@@ -166,7 +166,11 @@ body * {
 }
 
 body {
-  background: linear-gradient(45deg, #37ccff, #65383800);
+  /* background: linear-gradient(to right, #ffecd2, #fcb69f); */
+
+  background: radial-gradient(circle, #c2e59c, #64b3f4);
+  /* background: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%); */
+
 }
 
 
@@ -178,4 +182,10 @@ body {
 
 * {
   box-sizing: border-box;
+  /* color: blue; */
+}
+
+button {
+  background-color: white;
+  color: black;
 }
