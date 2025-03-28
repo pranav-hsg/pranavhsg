@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { btnStyle } from "@/utils/style";
 
 export default function Contact() {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
@@ -58,7 +59,7 @@ export default function Contact() {
                             required
                             value={formData.name}
                             onChange={handleChange}
-                            className="w-full border-gray-300 focus:border-primary focus:ring-primary p-3 rounded-lg"
+                            className="w-full border-1 border-gray-300 focus:border-primary focus:ring-primary p-3 rounded-lg"
                         />
                         <input
                             type="email"
@@ -67,7 +68,7 @@ export default function Contact() {
                             required
                             value={formData.email}
                             onChange={handleChange}
-                            className="w-full border-gray-300 focus:border-primary focus:ring-primary p-3 rounded-lg"
+                            className="w-full border-1 border-gray-300 focus:border-primary focus:ring-primary p-3 rounded-lg"
                         />
                         <textarea
                             name="message"
@@ -76,11 +77,11 @@ export default function Contact() {
                             rows={5}
                             value={formData.message}
                             onChange={handleChange}
-                            className="w-full border-gray-300 focus:border-primary focus:ring-primary p-3 rounded-lg"
+                            className="w-full border-1 border-gray-300 focus:border-primary focus:ring-primary p-3 rounded-lg"
                         ></textarea>
                         <button
                             type="submit"
-                            className="w-full bg-primary text-white py-3 rounded-lg hover:bg-primary-dark transition"
+                            className={btnStyle + " mx-auto cursor-pointer "}
                             disabled={loading}
                         >
                             {loading ? "Sending..." : "Send Message"}

@@ -1,8 +1,9 @@
 import React from 'react';
-import { Github, Linkedin } from 'lucide-react';
+import { Github, Linkedin, Sparkles } from 'lucide-react';
 import Image from 'next/image';
 import { FloatingCircles } from '@/utils/floating-circles';
 import Link from 'next/link';
+import { btnStyle } from '@/utils/style';
 
 const sections = [
   { title: 'About Me', description: 'Passionate about software development and problem-solving, I specialize in building scalable and efficient applications.', link: '/about', linkText: 'Learn more →' },
@@ -30,10 +31,10 @@ const Home = () => {
 
       {/* Call-to-Action Buttons */}
       <div className="mt-10 flex gap-6">
-        <a href="https://linkedin.com/in/pranav-hsg" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-primary text-white font-semibold rounded-full shadow-lg transition-all duration-300 flex items-center gap-2 hover:bg-blue-600 hover:shadow-xl">
+        <a href="https://linkedin.com/in/pranav-hsg" target="_blank" rel="noopener noreferrer" className={btnStyle}>
           <Linkedin className="w-5 h-5" /> LinkedIn
         </a>
-        <a href="https://github.com/pranav-hsg" target="_blank" rel="noopener noreferrer" className="px-8 py-3 bg-primary text-white font-semibold rounded-full shadow-lg transition-all duration-300 flex items-center gap-2 hover:bg-blue-600 hover:shadow-xl">
+        <a href="https://github.com/pranav-hsg" target="_blank" rel="noopener noreferrer" className={btnStyle + ' '}>
           <Github className="w-5 h-5" /> GitHub
         </a>
       </div>
@@ -50,6 +51,7 @@ const Home = () => {
           </div>
         ))}
       </div>
+
     </div>
   );
 };

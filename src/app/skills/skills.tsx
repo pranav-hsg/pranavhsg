@@ -1,3 +1,5 @@
+import { btnStyle } from "@/utils/style";
+
 export default function Skills() {
     const skills = [
         { category: "Frontend", items: ["React", "Next.js", "Angular", "HTML", "CSS", "TailwindCSS", "JavaScript", "TypeScript"] },
@@ -22,7 +24,7 @@ export default function Skills() {
                         <h3 className="text-xl font-semibold ">{category}</h3>
                         <div className="mt-4 flex flex-wrap gap-3">
                             {items.map((skill, i) => (
-                                <span key={i} className="bg-primary text-white px-3 py-1 rounded-lg text-sm">
+                                <span key={i} className={btnStyle + "px-3 py-1 rounded-lg text-sm"}>
                                     {skill}
                                 </span>
                             ))}
