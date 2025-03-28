@@ -125,7 +125,7 @@ body * {
 }
 
 :root {
-  --primary-color: #2563eb;
+  --primary-color: #181818;
   /* Default Blue */
   --secondary-color: #06b6d4;
   /* Default Cyan */
@@ -135,7 +135,7 @@ body * {
 }
 
 @theme {
-  --color-primary: #007bff;
+  --color-primary: #181818;
   /* A brighter blue, often used for primary actions */
   --color-secondary: #6c757d;
   /* A medium gray, good for secondary elements */

@@ -1,5 +1,5 @@
 import React from 'react';
-import { Github, Linkedin, Sparkles } from 'lucide-react';
+import { Github, Linkedin } from 'lucide-react';
 import Image from 'next/image';
 import { FloatingCircles } from '@/utils/floating-circles';
 import Link from 'next/link';
