@@ -49,11 +49,11 @@ export default function Header() {
 
             {/* Mobile Menu - Scrollable Fix */}
             <div
-                className={`fixed inset-0 bg-white/30 backdrop-blur-md z-40 transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-y-full"
+                className={`fixed inset-0 bg-white/90 backdrop-blur-4xl z-40 transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-y-full"
                     } md:hidden flex flex-col items-center py-4`}
                 style={{ height: "100vh" }} // Ensures full-screen height for scrolling
             >
-                <button onClick={() => setIsOpen(false)} className="absolute top-4 right-6">
+                <button onClick={() => setIsOpen(false)} className="absolute top-4 right-6 bg-transparent">
                     <X size={28} />
                 </button>
 
