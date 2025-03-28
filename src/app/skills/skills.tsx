@@ -7,7 +7,7 @@ export default function Skills() {
     ];
 
     return (
-        <section className="min-h-screen bg-gray-100 text-gray-800 py-16">
+        <section className="min-h-screen  text-gray-800 py-16">
             <div className="container mx-auto px-6 text-center">
                 <h1 className="text-4xl font-bold text-primary">Skills</h1>
                 <p className="mt-4 text-lg text-gray-600">

@@ -1,7 +1,7 @@
 import Image from "next/image";
 export default function About() {
     return (
-        <section className="min-h-screen bg-primary-light text-gray-800">
+        <section className="min-h-screen text-gray-800 h-full">
             {/* Hero Section */}
             <div className="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-10">
                 {/* Image */}

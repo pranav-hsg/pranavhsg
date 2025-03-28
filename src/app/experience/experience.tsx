@@ -1,3 +1,6 @@
+import { FloatingCircles } from "@/utils/floating-circles";
+import { div } from "framer-motion/client";
+
 export default function Experience() {
     const experiences = [
         {
@@ -45,50 +48,60 @@ export default function Experience() {
     ];
 
     return (
-        <section className="min-h-screen bg-gray-100 text-gray-800 py-16">
-            <div className="container mx-auto px-6 text-center">
-                <h1 className="text-4xl font-bold text-primary">Experience</h1>
-                <p className="mt-4 text-lg text-gray-600">A glimpse into my professional journey.</p>
-            </div>
+        <div className="h-full">
 
-            {/* Timeline Container */}
-            <div className="container mx-auto px-6 mt-10 relative">
-                {/* Vertical Timeline for Larger Screens */}
-                <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-primary h-full"></div>
+            <section className="relative min-h-screen text-gray-800 py-16">
 
-                {experiences.map(({ company, role, duration, description, techStack, date }, index) => (
-                    <div key={index} className={`relative flex flex-col md:flex-row items-center w-full mb-10 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
 
-                        {/* Timeline Dot with Date */}
-                        <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10">
-                            <span className="text-sm font-medium text-gray-700 bg-white px-2 py-1 rounded-md shadow-md">{date}</span>
-                            <div className="w-5 h-5 bg-primary rounded-full border-4 border-white mt-1"></div>
-                        </div>
+                <div className="container mx-auto px-6 text-center">
+                    <h1 className="text-4xl font-bold text-primary">Experience</h1>
+                    <p className="mt-4 text-lg text-gray-600">A glimpse into my professional journey.</p>
+                </div>
 
-                        {/* Experience Card */}
-                        <div className={`relative w-full md:w-5/12 bg-white shadow-md rounded-2xl p-6 hover:shadow-xl transition ${index % 2 === 0 ? "md:ml-auto" : "md:mr-auto"}`}>
+                {/* Timeline Container */}
+                <div className="container mx-auto px-6 mt-10 relative">
+                    {/* Vertical Timeline for Larger Screens */}
+                    <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-primary h-full"></div>
 
-                            {/* Hide Arrow in Mobile View */}
-                            <div className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-0 h-0 border-8 border-transparent ${index % 2 === 0 ? "md:-left-4 border-r-primary" : "md:-right-4 border-l-primary"}`}></div>
+                    {experiences.map(({ company, role, duration, description, techStack, date }, index) => (
+                        <div key={index} className={`relative flex flex-col md:flex-row items-center w-full mb-10 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
 
-                            <h3 className="text-xl font-semibold text-gray-800">
-                                {role} - <span className="text-gray-600">{company}</span>
-                            </h3>
-                            <p className="text-gray-500 text-sm mt-1">{duration}</p>
-                            <p className="mt-2 text-gray-600">{description}</p>
+                            {/* Timeline Dot with Date */}
+                            <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10">
+                                <span className="text-sm font-medium text-gray-700 bg-white px-2 py-1 rounded-md shadow-md">{date}</span>
+                                <div className="w-5 h-5 bg-primary rounded-full border-4 border-white mt-1"></div>
+                            </div>
+                            {/* Experience Card */}
+                            <div
+                                className={`relative w-full md:w-5/12 border border-white/20 shadow-lg rounded-2xl hover:shadow-2xl transition-transform duration-300 ${index % 2 === 0 ? "md:ml-auto" : "md:mr-auto"
+                                    }`}
+                            >
+                                <FloatingCircles n={1} />
+                                <div className="relative p-6 bg-white/10 backdrop-blur-2xl inherit rounded-2xl">
 
-                            {/* Tech Stack */}
-                            <div className="mt-4 flex flex-wrap gap-2">
-                                {techStack.map((tech, i) => (
-                                    <span key={i} className="bg-primary text-white px-3 py-1 rounded-lg text-sm">
-                                        {tech}
-                                    </span>
-                                ))}
+                                    <div className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-0 h-0 border-8 border-transparent ${index % 2 === 0 ? "md:-left-4 border-r-primary" : "md:-right-4 border-l-primary"}`}></div>
+
+                                    <h3 className="text-xl font-semibold text-gray-800">
+                                        {role} - <span className="text-gray-600">{company}</span>
+                                    </h3>
+                                    <p className="text-gray-500 text-sm mt-1">{duration}</p>
+                                    <p className="mt-2 text-gray-600">{description}</p>
+
+                                    {/* Tech Stack */}
+                                    <div className="mt-4 flex flex-wrap gap-2">
+                                        {techStack.map((tech, i) => (
+                                            <span key={i} className="bg-primary text-white px-3 py-1 rounded-lg text-sm">
+                                                {tech}
+                                            </span>
+                                        ))}
+                                    </div>
+                                </div>
+                                {/* Hide Arrow in Mobile View */}
                             </div>
                         </div>
-                    </div>
-                ))}
-            </div>
-        </section>
+                    ))}
+                </div>
+            </section>
+        </div>
     );
 }

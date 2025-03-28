@@ -2,7 +2,7 @@ import { Briefcase, GraduationCap, Code, Award, Download } from "lucide-react";
 
 export default function Resume() {
     return (
-        <section className="min-h-screen bg-gray-50 flex items-center justify-center py-16">
+        <section className="min-h-screen flex items-center justify-center py-16">
             <div className="container mx-auto px-6 md:px-12 lg:px-24">
                 <h1 className="text-5xl font-extrabold text-primary text-center">
                     My Resume

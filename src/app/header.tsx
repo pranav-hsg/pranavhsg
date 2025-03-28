@@ -20,7 +20,7 @@ export default function Header() {
 
     return (<>
         <div className="mt-10">&nbsp;</div>
-        <header className="w-full bg-white shadow-md fixed top-0 left-0 right-0 z-50">
+        <header className="w-full fixed top-0 left-0 right-0 z-50 bg-white/30 backdrop-blur-md shadow-md">
             <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
                 {/* Logo */}
                 <Link href="/" className="text-2xl font-bold text-primary">
@@ -46,7 +46,7 @@ export default function Header() {
 
             {/* Mobile Menu - Scrollable Fix */}
             <div
-                className={`fixed inset-0 bg-white z-40 transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-y-full"
+                className={`fixed inset-0 bg-white/30 backdrop-blur-md z-40 transition-transform duration-300 ${isOpen ? "translate-x-0" : "-translate-y-full"
                     } md:hidden flex flex-col items-center py-4`}
                 style={{ height: "100vh" }} // Ensures full-screen height for scrolling
             >
@@ -69,6 +69,7 @@ export default function Header() {
                 </ul>
             </div>
         </header>
+
     </>
     );
 }

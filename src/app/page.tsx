@@ -1,11 +1,13 @@
 import React from 'react';
 import { Github, Linkedin } from 'lucide-react'; // Import icons
 import Image from 'next/image';
+import { FloatingCircles } from '@/utils/floating-circles';
 
 const Home = () => {
 
   return (
-    <div className=" flex flex-col justify-center items-center text-center bg-white p-6">
+    <div className="relative flex flex-col justify-center items-center text-center p-6">
+      <FloatingCircles></FloatingCircles>
       {/* Profile Image */}
       <div
         className="w-40 h-40 rounded-full overflow-hidden border-4 border-white/80 shadow-2xl transition-transform duration-300"

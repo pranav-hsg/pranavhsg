@@ -21,7 +21,7 @@ export default function Projects() {
     ];
 
     return (
-        <section className="min-h-screen bg-gray-100 py-16">
+        <section className="min-h-screen py-16">
             <div className="container mx-auto px-6">
                 <h1 className="text-4xl font-bold text-primary text-center">My Projects</h1>
                 <p className="text-gray-600 text-center mt-2">A showcase of my open-source contributions and innovative work.</p>

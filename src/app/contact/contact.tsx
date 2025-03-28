@@ -39,7 +39,7 @@ export default function Contact() {
     };
 
     return (
-        <section className="min-h-screen bg-gray-100 flex items-center justify-center">
+        <section className="min-h-screen flex items-center justify-center">
             <div className="container mx-auto px-6 lg:w-1/2 bg-white shadow-md rounded-2xl p-8">
                 <h1 className="text-4xl font-bold text-primary text-center">Contact Me</h1>
                 <p className="text-gray-600 text-center mt-2">Feel free to reach out. I’ll get back to you as soon as possible.</p>
