@@ -1,11 +1,11 @@
 'use client'
 
 import { ToastContextType, ToastType } from "@/types/toast-types";
-import { createContext, useContext } from "react";
+import { createContext, ReactNode, useContext } from "react";
 import { toast, ToastContainer, ToastContainerProps, ToastOptions } from "react-toastify";
 
 const NotificationContext = createContext<ToastContextType | null>(null);
-export function NotificationContainerComponent({ children }: any) {
+export function NotificationContainerComponent({ children }: { children: ReactNode }) {
     const toastOptions: ToastContainerProps = {
         position: "top-right",
         autoClose: 5000,
@@ -19,7 +19,7 @@ export function NotificationContainerComponent({ children }: any) {
         theme: "light",
     };
 
-    const notify = (message: string, type: ToastType = "success", options?: ToastOptions) => { return toast[type](message, toastOptions) }
+    const notify = (message: string, type: ToastType = "success", options?: ToastOptions) => { return toast[type](message, options) }
     return (<>
         <NotificationContext.Provider value={{ notify }}>
             {children}

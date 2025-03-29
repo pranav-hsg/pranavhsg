@@ -1,5 +1,4 @@
 import { FloatingCircles } from "@/utils/floating-circles";
-import { Link } from "lucide-react";
 
 
 export default function Experience() {
