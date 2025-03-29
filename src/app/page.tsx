@@ -3,7 +3,6 @@ import { Github, Linkedin } from 'lucide-react';
 import Image from 'next/image';
 import { FloatingCircles } from '@/utils/floating-circles';
 import Link from 'next/link';
-import { btnStyle } from '@/utils/style';
 
 const sections = [
   { title: 'About Me', description: 'Passionate about software development and problem-solving, I specialize in building scalable and efficient applications.', link: '/about', linkText: 'Learn more →' },
@@ -31,10 +30,10 @@ const Home = () => {
 
       {/* Call-to-Action Buttons */}
       <div className="mt-10 flex gap-6">
-        <a href="https://linkedin.com/in/pranav-hsg" target="_blank" rel="noopener noreferrer" className={btnStyle}>
+        <a href="https://linkedin.com/in/pranav-hsg" target="_blank" rel="noopener noreferrer" className="glassy-btn">
           <Linkedin className="w-5 h-5" /> LinkedIn
         </a>
-        <a href="https://github.com/pranav-hsg" target="_blank" rel="noopener noreferrer" className={btnStyle + ' '}>
+        <a href="https://github.com/pranav-hsg" target="_blank" rel="noopener noreferrer" className="glassy-btn">
           <Github className="w-5 h-5" /> GitHub
         </a>
       </div>

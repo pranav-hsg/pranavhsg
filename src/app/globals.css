@@ -135,7 +135,7 @@ body * {
 }
 
 @theme {
-  --color-primary: #181818;
+  --color-primary: #13006d;
   /* A brighter blue, often used for primary actions */
   --color-secondary: #6c757d;
   /* A medium gray, good for secondary elements */
@@ -158,14 +158,21 @@ body * {
 @layer components {
   .good {
     background-color: red;
+    color: red;
+    @apply text-9xl;
+
   }
 
-  .glassy-btn-base {
-    @apply px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/30 flex items-center gap-2 font-semibold text-gray-900
+  .glassy-btn {
+    @apply px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/30 flex items-center gap-2 font-semibold text-gray-900;
+  }
+
+  .glassy-chip {
+    @apply px-3 py-1 rounded-lg text-sm bg-white/10 backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/30 flex items-center gap-2 font-semibold text-gray-900;
   }
 
   .cta-btn {
-    @apply bg-white/10 text-white hover:bg-white/20 border-white/20 px-6 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center gap-2 transform hover:scale-105
+    @apply bg-white/10 text-white hover:bg-white/20 border-white/20 px-6 py-3 rounded-full shadow-lg transition-all duration-300 flex items-center gap-2 transform hover:scale-105;
   }
 }
 

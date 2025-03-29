@@ -1,4 +1,3 @@
-import { btnStyle } from "@/utils/style";
 import Image from "next/image";
 export default function About() {
     return (
@@ -50,7 +49,7 @@ export default function About() {
                             {["JavaScript", "TypeScript", "React", "Angular", "Spring Boot", "TailwindCSS", "SQL"].map(skill => (
                                 <span
                                     key={skill}
-                                    className={btnStyle + " px-3 py-1 rounded-lg text-sm shadow-md"}
+                                    className="glassy-chip"
                                 >
                                     {skill}
                                 </span>
@@ -66,7 +65,7 @@ export default function About() {
                 <p className="mt-2 text-gray-600">Feel free to reach out!</p>
                 <a
                     href="/contact"
-                    className={btnStyle + "mt-4 inline-block bg-primary  font-medium hover:bg-primary-dark transition-all"}
+                    className="glassy-btn inline-block"
                 >
                     Contact Me
                 </a>

@@ -1,5 +1,5 @@
 import { FloatingCircles } from "@/utils/floating-circles";
-import { btnStyle } from "@/utils/style";
+import { Link } from "lucide-react";
 
 
 export default function Experience() {
@@ -32,12 +32,14 @@ export default function Experience() {
         {
             "company": "Open Source - NPM",
             "role": "AutoGapSlider - NPM Package",
+            "url": "https://www.npmjs.com/package/autogapslider",
             "duration": "March 2022",
             "date": "Mar 2022",
             "description": "Developed & Published to NPM, a zero-dependency, mobile-responsive React slider that automatically adjusts gaps between slides according to the viewport. Achieved a total of 300+ downloads.",
             "techStack": ["React", "JavaScript", "NPM"]
         }, {
             "company": "Personal Project",
+            "url": "https://google.com",
             "role": "Web Developer",
             "duration": "May 2020",
             "date": "May 8, 2020",
@@ -64,14 +66,15 @@ export default function Experience() {
                     {/* Vertical Timeline for Larger Screens */}
                     <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-600 h-full"></div>
 
-                    {experiences.map(({ company, role, duration, description, techStack, date }, index) => (
+                    {experiences.map(({ company, role, duration, description, techStack, date, url }, index) => (
                         <div key={index} className={`relative flex flex-col md:flex-row items-center w-full mb-10 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
 
                             {/* Timeline Dot with Date */}
                             <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10">
-                                <span className={btnStyle + "text-sm font-medium text-gray-700 bg-white px-2 py-1 rounded-md shadow-md"}>{date}</span>
+                                <span className="glassy-chip">{date}</span>
                                 <div className="w-5 h-5 bg-black rounded-full border-4 border-white mt-1"></div>
                             </div>
+
                             {/* Experience Card */}
                             <div
                                 className={`relative w-full md:w-5/12 border border-white/20 shadow-lg rounded-2xl hover:shadow-2xl transition-transform duration-300 ${index % 2 === 0 ? "md:ml-auto" : "md:mr-auto"
@@ -79,27 +82,34 @@ export default function Experience() {
                             >
                                 <FloatingCircles n={1} />
                                 <div className="relative p-6 bg-white/10 backdrop-blur-2xl inherit rounded-2xl">
-
-                                    <div className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-0 h-0 border-8 border-transparent ${index % 2 === 0 ? "md:-left-4 border-r-gray-600" : "md:-right-4 border-r-gray-600"}`}></div>
+                                    <div className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-0 h-0 border-8 border-transparent ${index % 2 === 0 ? "md:-left-4 border-r-gray-600" : "md:-right-4 border-l-gray-600"}`}></div>
 
                                     <h3 className="text-xl font-semibold text-gray-800">
                                         {role} - <span className="text-gray-600">{company}</span>
+
+                                        {/* Infinity Link Icon (Only if URL exists) */}
+                                        {url && (
+                                            <a href={url} target="_blank" rel="noopener noreferrer" className="ml-2 text-gray-400 hover:text-gray-600">
+                                                🔗
+                                            </a>
+                                        )}
                                     </h3>
+
                                     <p className="text-gray-500 text-sm mt-1">{duration}</p>
                                     <p className="mt-2 text-gray-600">{description}</p>
 
                                     {/* Tech Stack */}
                                     <div className="mt-4 flex flex-wrap gap-2">
                                         {techStack.map((tech, i) => (
-                                            <span key={i} className={btnStyle + " px-3 py-1 rounded-lg text-sm"}>
+                                            <span key={i} className="glassy-chip">
                                                 {tech}
                                             </span>
                                         ))}
                                     </div>
                                 </div>
-                                {/* Hide Arrow in Mobile View */}
                             </div>
                         </div>
+
                     ))}
                 </div>
             </section>

@@ -1,11 +1,19 @@
-import { btnStyle } from "@/utils/style";
 
 export default function Skills() {
     const skills = [
-        { category: "Frontend", items: ["React", "Next.js", "Angular", "HTML", "CSS", "TailwindCSS", "JavaScript", "TypeScript"] },
-        { category: "Backend", items: ["Java", "Spring Boot", "Django", "Node.js", "Express.js"] },
-        { category: "Databases", items: ["MySQL", "PostgreSQL", "MongoDB"] },
-        { category: "Tools & DevOps", items: ["Docker", "Git", "Jenkins", "Linux", "Shell Scripting"] },
+        { category: "Frontend", items: ["Angular", "HTML", "CSS", "TailwindCSS", "JavaScript", "TypeScript", "React", "Next JS"] },
+        { category: "Backend", items: ["Java", "Spring Boot", "Python", "Django", "Next JS"] },
+        { category: "Databases", items: ["SQL", "MySQL", "PostgreSQL"] },
+        { category: "Tools & DevOps", items: ["Git", "Jenkins", "Linux", "Shell Scripting"] },
+        {
+            category: "IDEs & Software", items: ["Visual Studio Code",
+                "IntelliJ IDEA",
+                "Pycharm",
+                "MySQL Workbench",
+                "Sourcetree",
+                "Postman",
+                "Figma"]
+        },
     ];
 
     return (
@@ -24,7 +32,7 @@ export default function Skills() {
                         <h3 className="text-xl font-semibold ">{category}</h3>
                         <div className="mt-4 flex flex-wrap gap-3">
                             {items.map((skill, i) => (
-                                <span key={i} className={btnStyle + "px-3 py-1 rounded-lg text-sm"}>
+                                <span key={i} className='glassy-chip'>
                                     {skill}
                                 </span>
                             ))}
