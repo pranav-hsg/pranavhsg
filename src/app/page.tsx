@@ -19,7 +19,7 @@ const Home = () => {
 
       {/* Profile Image */}
       <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-white/80 shadow-2xl transition-transform duration-300">
-        <Image height={260} width={200} src="/images/pranav.png" alt="Pranav HS" className="object-cover w-full h-full" />
+        <Image height={260} width={200} src="/images/pranav.jpeg" alt="Pranav HS" className="object-cover w-full h-full" />
       </div>
 
       {/* Name & Description */}
@@ -41,7 +41,7 @@ const Home = () => {
       {/* Additional Sections with Links */}
       <div className="mt-10 max-w-4xl mx-auto text-left grid grid-cols-1 md:grid-cols-2 gap-6">
         {sections.map((section, index) => (
-          <div key={index} className="p-6  bg-white/10 backdrop-blur-2xl border  rounded-lg shadow-lg hover:shadow-2xl transition-all duration-300 border-white">
+          <div key={index} className="card">
             <h2 className="text-2xl font-bold text-black">{section.title}</h2>
             <p className="mt-2 text-lg text-gray-700">{section.description}</p>
             <Link href={section.link} className="mt-2 inline-block text-primary font-semibold hover:underline">

@@ -9,7 +9,7 @@ export default function About() {
                     <Image
                         height={260}
                         width={200}
-                        src="/images/pranav.png"
+                        src="/images/pranav.jpeg"
                         alt="Pranav HS"
                         className="w-full rounded-2xl shadow-lg"
                     />
@@ -33,7 +33,7 @@ export default function About() {
 
                 <div className="mt-8 grid md:grid-cols-2 gap-8">
                     {/* Experience */}
-                    <div className="bg-white/10 backdrop-blur-2xl border border-white/20   shadow-lg rounded-2xl p-6">
+                    <div className="card">
                         <h3 className="text-xl font-semibold text-gray-800">Experience</h3>
                         <ul className="mt-4 space-y-3 text-gray-600">
                             <li>💼 <span className="font-medium text-primary">Full Stack Developer</span> at Sensei Technologies</li>
@@ -43,7 +43,7 @@ export default function About() {
                     </div>
 
                     {/* Skills */}
-                    <div className="bg-white/10 backdrop-blur-2xl border border-white/20    shadow-lg rounded-2xl p-6">
+                    <div className="card">
                         <h3 className="text-xl font-semibold text-gray-800">Technical Skills</h3>
                         <div className="mt-4 flex flex-wrap gap-3">
                             {["JavaScript", "TypeScript", "React", "Angular", "Spring Boot", "TailwindCSS", "SQL"].map(skill => (

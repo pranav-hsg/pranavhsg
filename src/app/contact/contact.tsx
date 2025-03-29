@@ -2,12 +2,14 @@
 
 import { useState } from "react";
 import emailjs from "@emailjs/browser";
+import { Mail } from "lucide-react";
+import { useNotify } from "@/context/notification-context";
 
 export default function Contact() {
     const [formData, setFormData] = useState({ name: "", email: "", message: "" });
     const [submitted, setSubmitted] = useState(false);
     const [loading, setLoading] = useState(false);
-
+    const { notify } = useNotify();
     const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         setFormData({ ...formData, [e.target.name]: e.target.value });
     };
@@ -28,11 +30,13 @@ export default function Contact() {
         };
 
         try {
+            notify("Sending message...", "info");
             await emailjs.send(serviceId, templateId, templateParams, publicKey);
+            notify("Message sent.")
             setSubmitted(true);
         } catch (error) {
             console.error("EmailJS error:", error);
-            alert("Failed to send the message. Please try again later.");
+            notify("Failed to send the message. Please try again later.", "error");
         } finally {
             setLoading(false);
         }
@@ -40,13 +44,13 @@ export default function Contact() {
 
     return (
         <section className="min-h-screen flex items-center justify-center">
-            <div className="container mx-auto px-6 lg:w-1/2 bg-white/10 backdrop-blur-2xl border border-white/20    shadow-md rounded-2xl p-8">
+            <div className="card">
                 <h1 className="text-4xl font-bold text-primary text-center">Contact Me</h1>
                 <p className="text-gray-600 text-center mt-2">Feel free to reach out. I’ll get back to you as soon as possible.</p>
 
                 {submitted ? (
                     <div className="mt-6 text-center">
-                        <p className="text-green-600 font-semibold">✅ Your message has been sent!</p>
+                        <p className="text-green-600 font-semibold"></p>
                         <p className="text-gray-500 mt-2">I will respond shortly.</p>
                     </div>
                 ) : (
@@ -58,7 +62,7 @@ export default function Contact() {
                             required
                             value={formData.name}
                             onChange={handleChange}
-                            className="w-full border-gray-300 focus:border-primary focus:ring-primary p-3 rounded-lg"
+                            className="glassy-input"
                         />
                         <input
                             type="email"
@@ -67,7 +71,7 @@ export default function Contact() {
                             required
                             value={formData.email}
                             onChange={handleChange}
-                            className="w-full border-gray-300 focus:border-primary focus:ring-primary p-3 rounded-lg"
+                            className="glassy-input"
                         />
                         <textarea
                             name="message"
@@ -76,14 +80,14 @@ export default function Contact() {
                             rows={5}
                             value={formData.message}
                             onChange={handleChange}
-                            className="w-full border-gray-300 focus:border-primary focus:ring-primary p-3 rounded-lg"
+                            className="glassy-input"
                         ></textarea>
                         <button
                             type="submit"
-                            className="w-full bg-primary text-white py-3 rounded-lg hover:bg-primary-dark transition"
+                            className="ml-auto glassy-btn"
                             disabled={loading}
                         >
-                            {loading ? "Sending..." : "Send Message"}
+                            <Mail className="w-5 h-5" /> {loading ? "Sending..." : "Send Message "}
                         </button>
                     </form>
                 )}

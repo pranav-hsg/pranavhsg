@@ -31,8 +31,7 @@ export default function Projects() {
                     {projects.map((project, index) => (
                         <div
                             key={index}
-                            className={`p-6 rounded-2xl shadow-lg bg-white/10 backdrop-blur-2xl border border-white/20   
-                                }`}
+                            className="card"
                         >
                             <h2 className="text-2xl font-semibold text-primary">{project.title}</h2>
                             <p className="text-gray-700 mt-2">{project.description}</p>

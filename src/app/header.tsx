@@ -3,12 +3,11 @@
 import { useState } from "react";
 import Link from "next/link";
 import { Menu, X } from "lucide-react"; // Icon library for menu and close icons
-import { useActivePath } from "@/utils/useActivePath";
+import { useActivePath } from "@/utils/user-active-path";
 
 export default function Header() {
     const [isOpen, setIsOpen] = useState(false);
     const isPathActive = useActivePath()
-    console.log(isPathActive("/home"))
     const links = [
         { name: "Home", path: "/" },
         { name: "About", path: "/about" },

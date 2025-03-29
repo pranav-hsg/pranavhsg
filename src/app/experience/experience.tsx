@@ -64,15 +64,15 @@ export default function Experience() {
                 {/* Timeline Container */}
                 <div className="container mx-auto px-6 mt-10 relative">
                     {/* Vertical Timeline for Larger Screens */}
-                    <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 bg-gray-600 h-full"></div>
+                    <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 glassy-base bg-white/20 h-full"></div>
 
                     {experiences.map(({ company, role, duration, description, techStack, date, url }, index) => (
                         <div key={index} className={`relative flex flex-col md:flex-row items-center w-full mb-10 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
 
                             {/* Timeline Dot with Date */}
                             <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10">
-                                <span className="glassy-chip">{date}</span>
-                                <div className="w-5 h-5 bg-black rounded-full border-4 border-white mt-1"></div>
+                                <span className="glassy-chip ">{date}</span>
+                                <div className="w-5 h-5 rounded-full border-4 border-gray-600 glassy-base mt-1"></div>
                             </div>
 
                             {/* Experience Card */}
@@ -82,6 +82,7 @@ export default function Experience() {
                             >
                                 <FloatingCircles n={1} />
                                 <div className="relative p-6 bg-white/10 backdrop-blur-2xl inherit rounded-2xl">
+                                    {/* Triangle made out of border */}
                                     <div className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-0 h-0 border-8 border-transparent ${index % 2 === 0 ? "md:-left-4 border-r-gray-600" : "md:-right-4 border-l-gray-600"}`}></div>
 
                                     <h3 className="text-xl font-semibold text-gray-800">

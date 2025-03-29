@@ -153,8 +153,6 @@ body * {
   @apply transition-all duration-300 transform hover:scale-103 hover:shadow-xl;
 }
 
-
-
 @layer components {
   .good {
     background-color: red;
@@ -163,12 +161,26 @@ body * {
 
   }
 
-  .glassy-btn {
-    @apply px-4 py-2 rounded-full bg-white/10 backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/30 flex items-center gap-2 font-semibold text-gray-900;
+  .glassy-base {
+    @apply bg-white/10 backdrop-blur-md;
   }
 
+  .glassy-btn {
+    @apply bg-white/10 backdrop-blur-md px-4 py-2 rounded-lg border border-white/20 shadow-lg transition-all duration-300 hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/30 flex items-center gap-2 font-semibold text-gray-900;
+  }
+
+  .glassy-input {
+    @apply w-full !bg-white/10 backdrop-blur-md p-3 text-gray-900 rounded-lg border !border-white/20 shadow-lg resize-none focus:outline-none focus:ring-2 focus:ring-white/30 placeholder-gray-500;
+  }
+
+
+
   .glassy-chip {
-    @apply px-3 py-1 rounded-lg text-sm bg-white/10 backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/30 flex items-center gap-2 font-semibold text-gray-900;
+    @apply px-3 py-1 rounded-lg text-sm border border-white/20 shadow-lg transition-all duration-300 hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/30 flex items-center gap-2 font-semibold text-gray-900;
+  }
+
+  .card {
+    @apply bg-white/10 backdrop-blur-2xl border border-white/40 shadow-md rounded-2xl p-6 hover:shadow-xl transition;
   }
 
   .cta-btn {
@@ -177,12 +189,13 @@ body * {
 }
 
 body {
-  /* background: linear-gradient(to right, #ffecd2, #fcb69f); */
+  background: linear-gradient(to right, #ffecd2, #fcb69f);
 
   background: radial-gradient(circle, #c2e59c, #64b3f4);
   /* background: linear-gradient(to right, #ff8177 0%, #ff867a 0%, #ff8c7f 21%, #f99185 52%, #cf556c 78%, #b12a5b 100%); */
-
+  /* background: linear-gradient(to right, #89f7fe, #8cc9ff); */
 }
+
 
 
 html,
@@ -193,5 +206,6 @@ body {
 
 * {
   box-sizing: border-box;
+
   /* color: blue; */
 }

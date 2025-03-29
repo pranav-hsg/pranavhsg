@@ -28,7 +28,7 @@ export default function Skills() {
             {/* Skills Grid */}
             <div className="container mx-auto px-6 mt-10 grid md:grid-cols-2 lg:grid-cols-2 gap-8">
                 {skills.map(({ category, items }, index) => (
-                    <div key={index} className="bg-white/10 backdrop-blur-2xl border border-white/20    shadow-md rounded-2xl p-6 hover:shadow-xl transition">
+                    <div key={index} className="card">
                         <h3 className="text-xl font-semibold ">{category}</h3>
                         <div className="mt-4 flex flex-wrap gap-3">
                             {items.map((skill, i) => (
