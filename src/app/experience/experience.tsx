@@ -14,6 +14,7 @@ export default function Experience() {
         },
         {
             company: "Maven Central",
+            url: "https://www.linkedin.com/feed/update/urn:li:activity:7157426769770254336?utm_source=share&utm_medium=member_desktop&rcm=ACoAADU1bg4BPdkQEIFe7xn9lfYW9ej9HQKezvU",
             role: "Open Source",
             duration: "January 2024",
             date: "Jan 2024",
@@ -24,6 +25,7 @@ export default function Experience() {
         {
             company: "Open Source",
             role: "Contributor - Spring Data JPA",
+            url: "https://github.com/spring-projects/spring-data-jpa/graphs/contributors",
             duration: "June 2023",
             date: "Jun 2023",
             description: "Optimized count query generation logic, improving query execution speed by over 30% across the application, and earned formal recognition as an official contributor.",
@@ -64,26 +66,26 @@ export default function Experience() {
                 {/* Timeline Container */}
                 <div className="container mx-auto px-6 mt-10 relative">
                     {/* Vertical Timeline for Larger Screens */}
-                    <div className="hidden md:block absolute left-1/2 transform -translate-x-1/2 w-1 glassy-base bg-white/20 h-full"></div>
+                    <div className="md:block absolute left-1/2 transform -translate-x-1/2 w-1 glassy-base bg-white/20 h-full"></div>
 
                     {experiences.map(({ company, role, duration, description, techStack, date, url }, index) => (
                         <div key={index} className={`relative flex flex-col md:flex-row items-center w-full mb-10 ${index % 2 === 0 ? "md:flex-row-reverse" : ""}`}>
 
-                            {/* Timeline Dot with Date */}
+                            {/* Round Dot with Date */}
                             <div className="hidden md:flex absolute left-1/2 transform -translate-x-1/2 flex flex-col items-center z-10">
                                 <span className="glassy-chip ">{date}</span>
-                                <div className="w-5 h-5 rounded-full border-4 border-gray-600 glassy-base mt-1"></div>
+                                <div className="w-5 h-5 rounded-full border-4 border-white/40 glassy-base mt-1"></div>
                             </div>
 
                             {/* Experience Card */}
                             <div
-                                className={`relative w-full md:w-5/12 border border-white/20 shadow-lg rounded-2xl hover:shadow-2xl transition-transform duration-300 ${index % 2 === 0 ? "md:ml-auto" : "md:mr-auto"
+                                className={`relative w-full md:w-5/12  hover:shadow-2xl transition-transform duration-300 ${index % 2 === 0 ? "md:ml-auto" : "md:mr-auto"
                                     }`}
                             >
                                 <FloatingCircles n={1} />
-                                <div className="relative p-6 bg-white/10 backdrop-blur-2xl inherit rounded-2xl">
+                                <div className="relative card">
                                     {/* Triangle made out of border */}
-                                    <div className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-0 h-0 border-8 border-transparent ${index % 2 === 0 ? "md:-left-4 border-r-gray-600" : "md:-right-4 border-l-gray-600"}`}></div>
+                                    <div className={`hidden md:block absolute top-1/2 -translate-y-1/2 w-0 h-0 border-8 border-transparent ${index % 2 === 0 ? "md:-left-4 border-r-white/40" : "md:-right-4 border-l-white/40"}`}></div>
 
                                     <h3 className="text-xl font-semibold text-gray-800">
                                         {role} - <span className="text-gray-600">{company}</span>

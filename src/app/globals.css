@@ -166,17 +166,18 @@ body * {
   }
 
   .glassy-btn {
-    @apply bg-white/10 backdrop-blur-md px-4 py-2 rounded-lg border border-white/20 shadow-lg transition-all duration-300 hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/30 flex items-center gap-2 font-semibold text-gray-900;
+    @apply bg-white/10 px-4 py-2 rounded-lg border border-white/20 shadow-lg transition-all duration-300 hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/30 flex items-center gap-2 font-semibold text-gray-900;
   }
 
   .glassy-input {
-    @apply w-full !bg-white/10 backdrop-blur-md p-3 text-gray-900 rounded-lg border !border-white/20 shadow-lg resize-none focus:outline-none focus:ring-2 focus:ring-white/30 placeholder-gray-500;
+    all: unset;
+    @apply w-full !bg-white/10 p-3 text-gray-900 rounded-lg border border-white/20 shadow-lg resize-none focus:outline-none focus:ring-2 focus:ring-white/30 placeholder-gray-500;
   }
 
 
 
   .glassy-chip {
-    @apply px-3 py-1 rounded-lg text-sm border border-white/20 shadow-lg transition-all duration-300 hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/30 flex items-center gap-2 font-semibold text-gray-900;
+    @apply px-3 py-1 rounded-lg text-sm border border-white/20 shadow-lg transition-all duration-300 hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/30 flex items-center gap-2 font-semibold text-gray-900 cursor-default;
   }
 
   .card {
@@ -201,7 +202,7 @@ body {
 html,
 body {
   min-height: 100%;
-
+  color: red;
 }
 
 * {

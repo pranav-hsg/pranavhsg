@@ -5,15 +5,8 @@ export default function Skills() {
         { category: "Backend", items: ["Java", "Spring Boot", "Python", "Django", "Next JS"] },
         { category: "Databases", items: ["SQL", "MySQL", "PostgreSQL"] },
         { category: "Tools & DevOps", items: ["Git", "Jenkins", "Linux", "Shell Scripting"] },
-        {
-            category: "IDEs & Software", items: ["Visual Studio Code",
-                "IntelliJ IDEA",
-                "Pycharm",
-                "MySQL Workbench",
-                "Sourcetree",
-                "Postman",
-                "Figma"]
-        },
+        { category: "IDEs & Software", items: ["Visual Studio Code", "IntelliJ IDEA", "Pycharm", "MySQL Workbench", "Sourcetree", "Postman", "Figma"] },
+        { category: "Soft Skills", items: ["Team Collaboration", "Effective Communication"] },
     ];
 
     return (

@@ -5,11 +5,11 @@ import { FloatingCircles } from '@/utils/floating-circles';
 import Link from 'next/link';
 
 const sections = [
-  { title: 'About Me', description: 'Passionate about software development and problem-solving, I specialize in building scalable and efficient applications.', link: '/about', linkText: 'Learn more →' },
-  { title: 'Projects', description: 'A collection of projects showcasing my expertise in full-stack development.', link: '/projects', linkText: 'View projects →' },
-  { title: 'Experience', description: 'Explore my professional journey and career milestones in software development.', link: '/experience', linkText: 'View experience timeline →' },
-  { title: 'Skills', description: 'Proficient in modern web technologies, frameworks, and tools.', link: '/skills', linkText: 'Explore skills →' },
-  { title: 'Contact', description: 'Let’s connect! Reach out for collaborations, job opportunities, or discussions.', link: '/contact', linkText: 'Get in touch →' }
+  { title: 'About Me', description: 'A problem-solver at heart, I love building scalable applications that work smoothly—preferably without mysterious bugs appearing at midnight.', link: '/about', linkText: 'Learn more →' },
+  { title: 'Projects', description: 'A collection of things I’ve built—some elegant, some complex, and all crafted with a mix of logic, creativity, and a few late-night debugging sessions.', link: '/projects', linkText: 'View projects →' },
+  { title: 'Experience', description: 'A timeline of my heroic journey in software development—complete with battles against bugs and victory celebrations when things work.', link: '/experience', linkText: 'View experience timeline →' },
+  { title: 'Skills', description: 'I speak fluent JavaScript, negotiate with APIs daily, and can even CSS my way into a sleek, responsive design', link: '/skills', linkText: 'Explore skills →' },
+  { title: 'Contact', description: 'Let’s connect! Whether it’s for collaboration or new opportunities, I’m always up for a good conversation.', link: '/contact', linkText: 'Get in touch →' }
 ];
 
 const Home = () => {
