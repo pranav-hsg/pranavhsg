@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     siteName: "Pranav H S G | Full-Stack Developer",
     images: [
       {
-        url: "https://pranavhsg.com/default-og-image.png",
+        url: "https://pranavhsg.com/images/default-og-image.png",
         width: 1200,
         height: 630,
         alt: "Pranav H S G Portfolio",
