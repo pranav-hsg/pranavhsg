@@ -32,6 +32,18 @@ export const metadata: Metadata = {
     ],
     type: "website",
   },
+  other: {
+    "ld+json": JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Pranav H S G | Full-Stack Developer",
+      "url": "https://pranavhsg.com",
+      "author": {
+        "@type": "Person",
+        "name": "Pranav H S G"
+      }
+    })
+  }
 };
 
 
