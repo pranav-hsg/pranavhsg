@@ -1,7 +1,7 @@
 import { FloatingCircles } from "@/utils/floating-circles";
 
 
-export default function Experience() {
+export default function MyJourney() {
     const experiences = [
         {
             company: "Sensei Technologies",
@@ -77,7 +77,7 @@ export default function Experience() {
 
 
                 <div className="container mx-auto px-6 text-center">
-                    <h1 className="text-4xl font-bold text-primary">Experience</h1>
+                    <h1 className="text-4xl font-bold text-primary">My Journey</h1>
                     <p className="mt-4 text-lg text-gray-600">A glimpse into my professional journey.</p>
                 </div>
 

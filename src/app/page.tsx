@@ -7,7 +7,7 @@ import Link from 'next/link';
 const sections = [
   { title: 'About Me', description: 'A problem-solver at heart, I love building scalable applications that work smoothly—preferably without mysterious bugs appearing at midnight.', link: '/about', linkText: 'Learn more →' },
   { title: 'Projects', description: 'A collection of things I’ve built—some elegant, some complex, and all crafted with a mix of logic, creativity, and a few late-night debugging sessions.', link: '/projects', linkText: 'View projects →' },
-  { title: 'Experience', description: 'A timeline of my heroic journey in software development—complete with battles against bugs and victory celebrations when things work.', link: '/experience', linkText: 'View experience timeline →' },
+  { title: 'My Journey', description: 'A timeline of my heroic journey in software development—complete with battles against bugs and victory celebrations when things work.', link: '/my-journey', linkText: 'View My Journey →' },
   { title: 'Skills', description: 'I speak fluent JavaScript, negotiate with APIs daily, and can even CSS my way into a sleek, responsive design', link: '/skills', linkText: 'Explore skills →' },
   { title: 'Contact', description: 'Let’s connect! Whether it’s for collaboration or new opportunities, I’m always up for a good conversation.', link: '/contact', linkText: 'Get in touch →' }
 ];

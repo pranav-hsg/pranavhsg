@@ -45,7 +45,7 @@ export default function Projects() {
                         <p className="mt-2 ">{description}</p>
 
                         {/* Key Features */}
-                        <ul className="mt-4 text-sm  list-disc list-inside">
+                        <ul className="mt-4 list-disc list-inside">
                             {keyFeatures.map((feature, i) => (
                                 <li key={i}>{feature}</li>
                             ))}
@@ -64,7 +64,7 @@ export default function Projects() {
                         </div>
 
                         {/* GitHub/NPM Link */}
-                        <a href={link} target="_blank" rel="noopener noreferrer" className="mt-4 inline-block text-primary hover:underline">
+                        <a href={link} target="_blank" rel="noopener noreferrer" className="link">
                             View Project →
                         </a>
                     </div>
