@@ -16,19 +16,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Pranav H S G | Full-Stack Developer",
+  title: "Pranav H S | Full-Stack Developer",
   description: "I build fast, scalable web apps using Angular, Spring Boot, Next.js & more!",
   openGraph: {
-    title: "Pranav H S G | Full-Stack Developer",
+    title: "Pranav H S | Full-Stack Developer",
     description: "Crafting high-performance web applications with Angular, Spring Boot, and Next.js. Check out my work and open-source contributions!",
     url: "https://pranavhsg.com",
-    siteName: "Pranav H S G | Full-Stack Developer",
+    siteName: "Pranav H S | Full-Stack Developer",
     images: [
       {
         url: "https://pranavhsg.com/images/default-og-image.png",
         width: 1200,
         height: 630,
-        alt: "Pranav H S G Portfolio",
+        alt: "Pranav H S Portfolio",
       },
     ],
     type: "website",
@@ -46,11 +46,11 @@ export default function RootLayout({
   //     __html: {
   //       "@context": "https://schema.org",
   //       "@type": "WebSite",
-  //       "name": "Pranav H S G | Full-Stack Developer",
+  //       "name": "Pranav H S | Full-Stack Developer",
   //       "url": "https://pranavhsg.com",
   //       "author": {
   //         "@type": "Person",
-  //         "name": "Pranav H S G"
+  //         "name": "Pranav H S"
   //       }
   //     }
   //   }
