@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "./header";
 import { NotificationContainerComponent } from "@/context/notification-context";
 import { Footer } from "./footer";
+import Script from "next/script";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,20 +42,20 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  // function addHomeJsonLd() {
-  //   return {
-  //     __html: {
-  //       "@context": "https://schema.org",
-  //       "@type": "WebSite",
-  //       "name": "Pranav H S | Full-Stack Developer",
-  //       "url": "https://pranavhsg.com",
-  //       "author": {
-  //         "@type": "Person",
-  //         "name": "Pranav H S"
-  //       }
-  //     }
-  //   }
-  // }
+  function addHomeJsonLd() {
+    return {
+      __html: JSON.stringify({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Pranav H S | Full-Stack Developer",
+        "url": "https://pranavhsg.com",
+        "author": {
+          "@type": "Person",
+          "name": "Pranav H S"
+        }
+      })
+    }
+  }
   return (
     <html lang="en">
 
@@ -62,6 +63,8 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <Script type="application/ld+json"
+          dangerouslySetInnerHTML={addHomeJsonLd()} id="personal-script"></Script>
         <NotificationContainerComponent>
 
           <Header />
