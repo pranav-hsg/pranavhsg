@@ -12,6 +12,15 @@ export default function Experience() {
             techStack: ["Java", "Spring Boot", "Angular", "MySQL", "Docker"],
         },
         {
+            "company": "Personal Project",
+            "role": "Developer - PranavHSG.com",
+            "url": "https://pranavhsg.com",
+            "duration": "March 2025",
+            "date": "Mar 2025",
+            "description": "Built the site you are seeing now, PranavHSG.com, using Next.js and deployed it successfully. It features SEO-optimized pages, ensuring better visibility and performance.",
+            "techStack": ["Next.js", "React", "Tailwind CSS", "SEO", "Vercel"]
+        },
+        {
             company: "Maven Central",
             url: "https://www.linkedin.com/feed/update/urn:li:activity:7157426769770254336?utm_source=share&utm_medium=member_desktop&rcm=ACoAADU1bg4BPdkQEIFe7xn9lfYW9ej9HQKezvU",
             role: "Open Source",
@@ -38,13 +47,23 @@ export default function Experience() {
             "date": "Mar 2022",
             "description": "Developed & Published to NPM, a zero-dependency, mobile-responsive React slider that automatically adjusts gaps between slides according to the viewport. Achieved a total of 300+ downloads.",
             "techStack": ["React", "JavaScript", "NPM"]
-        }, {
+        },
+        {
             "company": "Personal Project",
-            "url": "https://google.com",
+            "role": "Developer - Kashvi Voice Assistant",
+            "url": "https://github.com/pranav-hsg/kashvi/tree/decorator-error-handle",
+            "duration": "April 2021 - August 2021",
+            "date": "Aug 2021",
+            "description": "Developed Kashvi, a Kannada voice assistant built with Python that enables users to interact with technology hands-free in their native language. Kashvi can fetch news, search Wikipedia, send WhatsApp messages, open YouTube videos, check the weather, perform Google searches, and execute PC commands. ",
+            "techStack": ["Python", "Speech Recognition", "Natural Language Processing", "Automation", "Web Scraping", "Beautiful Soup"]
+        },
+        {
+            "company": "Personal Project",
+            "url": "https://pranav-hsg.github.io/Balebailu/",
             "role": "Web Developer",
             "duration": "May 2020",
             "date": "May 8, 2020",
-            "description": "Built my very own first website and published it to GitHub using HTML and CSS, gaining hands-on experience in web development.",
+            "description": "Built my very own first website and deployed it to GitHub using HTML and CSS, gaining hands-on experience in web development.",
             "techStack": ["HTML", "CSS", "GitHub"]
         }
 
