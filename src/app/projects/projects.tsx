@@ -15,7 +15,7 @@ const Projects = () => {
             ],
             impact: "Open-source and trusted by developers.",
             techStack: ["Java", "Apache POI", "Maven"],
-            link: "https://github.com/pranavhs/poimapper",
+            link: "https://mvnrepository.com/artifact/io.github.pranav-hsg/poimapper",
         },
         {
             title: "AutoGapSlider - NPM Package",
