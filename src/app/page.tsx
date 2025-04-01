@@ -44,7 +44,7 @@ const Home = () => {
           <div key={index} className="card">
             <h2 className="text-2xl font-bold text-black">{section.title}</h2>
             <p className="mt-2 text-lg text-gray-700">{section.description}</p>
-            <Link href={section.link} className="mt-2 inline-block text-primary font-semibold hover:underline">
+            <Link href={section.link} className="link">
               {section.linkText}
             </Link>
           </div>

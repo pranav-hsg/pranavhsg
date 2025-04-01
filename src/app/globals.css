@@ -180,6 +180,10 @@ body * {
     @apply px-3 py-1 rounded-lg text-sm border border-white/20 shadow-lg transition-all duration-300 hover:bg-white/20 hover:scale-105 focus:outline-none focus:ring-2 focus:ring-white/30 flex items-center gap-2 font-semibold text-gray-900 cursor-default;
   }
 
+  .link {
+    @apply mt-2 inline-block text-blue-600 font-semibold hover:underline
+  }
+
   .card {
     @apply bg-white/10 backdrop-blur-2xl border border-white/40 shadow-md rounded-2xl p-6 hover:shadow-xl transition;
   }

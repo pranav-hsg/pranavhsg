@@ -33,7 +33,7 @@ export default function Header() {
                 <ul className="hidden md:flex space-x-6">
                     {links.map(({ name, path }) => (
                         <li key={path}>
-                            <Link href={path} className={` hover:text-blue-500 font-medium ${isPathActive(path) ? 'text-blue-500 ' : 'text-gray-700'}`}>
+                            <Link href={path} className={` hover:text-primary font-medium ${isPathActive(path) ? 'text-primary ' : 'text-gray-700'}`}>
                                 {name}
                             </Link>
                         </li>
@@ -61,7 +61,7 @@ export default function Header() {
                         <li key={path}>
                             <Link
                                 href={path}
-                                className={`block  hover:text-blue-500 font-medium py-2 ${isPathActive(path) ? 'text-blue-500 ' : 'text-gray-700'}`}
+                                className={`block  hover:text-primary font-medium py-2 ${isPathActive(path) ? 'text-primary ' : 'text-gray-700'}`}
                                 onClick={() => setIsOpen(false)}
                             >
                                 {name}
