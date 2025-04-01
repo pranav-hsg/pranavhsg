@@ -1,5 +1,10 @@
-export default function Projects() {
-    const projects = [
+// 'use client'
+// import React, { useState } from 'react';
+
+import { Project } from "@/types/my-journey-types";
+
+const Projects = () => {
+    const projects: Project[] = [
         {
             title: "Poimapper Java Library",
             description: "A lightweight Java library to streamline Excel file processing by mapping rows to Java objects, reducing manual work.",
@@ -19,12 +24,22 @@ export default function Projects() {
                 "Auto-adjusting slide gaps",
                 "Works across all screen sizes",
                 "Zero external dependencies",
+                "Smooth animations",
             ],
             impact: "Downloaded 300+ times on NPM.",
             techStack: ["React", "JavaScript", "NPM"],
             link: "https://www.npmjs.com/package/autogapslider",
         }
     ];
+
+    // const [expandedFeatures, setExpandedFeatures] = useState<{ [key: string]: boolean }>({});
+
+    // const toggleFeatures = (index: number) => {
+    //     setExpandedFeatures(prev => ({
+    //         ...prev,
+    //         [index]: !prev[index]
+    //     }));
+    // };
 
     return (
         <section id="projects" className="py-16">
@@ -33,13 +48,13 @@ export default function Projects() {
                 <p className="mt-4 text-lg text-gray-600">Some of my featured works.</p>
             </div>
 
-            <div className="container mx-auto px-6 mt-10 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="container mx-auto px-6 mt-10 flex flex-wrap justify-center gap-6">
                 {projects.map(({ title, description, keyFeatures, impact, techStack, link }, index) => (
-                    <div key={index} className="relative card transition duration-300 group">
+                    <div key={index} className="card w-[450px] group">
                         {/* Floating Icon on Hover */}
-                        <div className="absolute -top-4 -right-4 card text-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition">
+                        {/* <div className="absolute -top-4 -right-4 card text-white p-2 rounded-full shadow-md opacity-0 group-hover:opacity-100 transition">
                             🚀
-                        </div>
+                        </div> */}
 
                         <h3 className="text-xl font-semibold text-gray-800">{title}</h3>
                         <p className="mt-2 ">{description}</p>
@@ -50,6 +65,14 @@ export default function Projects() {
                                 <li key={i}>{feature}</li>
                             ))}
                         </ul>
+                        {/* .slice(0, expandedFeatures[index] ? keyFeatures.length : 3) {keyFeatures.length > 3 && (
+                            <button
+                                className="text-blue-500 hover:text-blue-700 mt-2 text-sm"
+                                onClick={() => toggleFeatures(index)}
+                            >
+                                {expandedFeatures[index] ? 'Show Less' : 'View More'}
+                            </button>
+                        )} */}
 
                         {/* Impact */}
                         <p className="mt-4 text-sm font-medium text-primary">{impact}</p>
@@ -72,4 +95,6 @@ export default function Projects() {
             </div>
         </section>
     );
-}
+};
+
+export default Projects;

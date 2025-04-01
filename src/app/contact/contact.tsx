@@ -44,7 +44,7 @@ export default function Contact() {
 
     return (
         <section className="min-h-screen flex items-center justify-center">
-            <div className="card">
+            <div className="card w-[600px]">
                 <h1 className="text-4xl font-bold text-primary text-center">Contact Me</h1>
                 <p className="text-gray-600 text-center mt-2">Feel free to reach out. I’ll get back to you as soon as possible.</p>
 

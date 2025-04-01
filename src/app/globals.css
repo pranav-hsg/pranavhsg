@@ -181,11 +181,11 @@ body * {
   }
 
   .link {
-    @apply mt-2 inline-block text-blue-600 font-semibold hover:underline
+    @apply mt-2 inline-block text-primary font-semibold hover:underline
   }
 
   .card {
-    @apply bg-white/10 backdrop-blur-2xl border border-white/40 shadow-md rounded-2xl p-6 hover:shadow-xl transition;
+    @apply w-full bg-white/10 backdrop-blur-2xl border border-white/40 shadow-md rounded-2xl p-6 hover:shadow-xl transition;
   }
 
   .cta-btn {
