@@ -2,6 +2,7 @@
 // import React, { useState } from 'react';
 
 import { Project } from "@/types/my-journey-types";
+import { findFaIcon } from "@/utils/icon-util";
 
 const Projects = () => {
     const projects: Project[] = [
@@ -81,7 +82,7 @@ const Projects = () => {
                         <div className="mt-4 flex flex-wrap gap-2">
                             {techStack.map((tech, i) => (
                                 <span key={i} className="glassy-chip">
-                                    {tech}
+                                    {findFaIcon(tech)} {tech}
                                 </span>
                             ))}
                         </div>

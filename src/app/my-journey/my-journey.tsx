@@ -1,4 +1,5 @@
 import { FloatingCircles } from "@/utils/floating-circles";
+import { findFaIcon } from "@/utils/icon-util";
 
 
 export default function MyJourney() {
@@ -123,7 +124,7 @@ export default function MyJourney() {
                                     <div className="mt-4 flex flex-wrap gap-2">
                                         {techStack.map((tech, i) => (
                                             <span key={i} className="glassy-chip">
-                                                {tech}
+                                                {findFaIcon(tech)} {tech}
                                             </span>
                                         ))}
                                     </div>
