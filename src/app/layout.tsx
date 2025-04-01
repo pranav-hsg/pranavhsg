@@ -3,7 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Header from "./header";
 import { NotificationContainerComponent } from "@/context/notification-context";
-import { Head } from "next/document";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,29 +40,24 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  function addHomeJsonLd() {
-    return {
-      __html: {
-        "@context": "https://schema.org",
-        "@type": "WebSite",
-        "name": "Pranav H S G | Full-Stack Developer",
-        "url": "https://pranavhsg.com",
-        "author": {
-          "@type": "Person",
-          "name": "Pranav H S G"
-        }
-      }
-    }
-  }
+  // function addHomeJsonLd() {
+  //   return {
+  //     __html: {
+  //       "@context": "https://schema.org",
+  //       "@type": "WebSite",
+  //       "name": "Pranav H S G | Full-Stack Developer",
+  //       "url": "https://pranavhsg.com",
+  //       "author": {
+  //         "@type": "Person",
+  //         "name": "Pranav H S G"
+  //       }
+  //     }
+  //   }
+  // }
   return (
     <html lang="en">
-      <Head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={addHomeJsonLd()}
-          key="product-jsonld"
-        />
-      </Head>
+
+
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
