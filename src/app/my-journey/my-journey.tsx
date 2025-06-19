@@ -6,11 +6,19 @@ import { siteConfig } from "../config/config";
 export default function MyJourney() {
     const experiences = [
         {
+            company: "Vela Technologies",
+            role: "Full Stack Developer",
+            duration: "June 2025 - Present",
+            date: "Present",
+            description: "Currently working as a Full Stack Web Developer, contributing to the development and maintenance of a Engineering Document Management System",
+            techStack: ["C#", "ASP.Net", "React", "SQL Server", "Docker"],
+        },
+        {
             company: "Sensei Technologies",
             role: "Full Stack Developer",
             duration: "April 2022 - 2025",
-            date: "Present",
-            description: "Developed 10+ end-to-end CRUD screens using Spring Boot and Angular. Optimized API performance, engineered a WhatsApp notification system, and contributed to Spring Data JPA.",
+            date: "June 2025",
+            description: "Handled Loan Management System, Developed 10+ end-to-end CRUD screens using Spring Boot and Angular. Optimized API performance, engineered a WhatsApp notification system, and contributed to Spring Data JPA.",
             techStack: ["Java", "Spring Boot", "Angular", "MySQL", "Docker"],
         },
         {

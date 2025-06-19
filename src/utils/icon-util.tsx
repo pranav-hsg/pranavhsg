@@ -32,7 +32,8 @@ import {
     SiHibernate,
     SiNpm,
     SiGithub,
-    SiGooglesearchconsole // Using for SEO
+    SiGooglesearchconsole, // Using for SEO
+    SiDotnet
 } from 'react-icons/si';
 
 // Define the Map outside the function for performance (created once)
@@ -52,7 +53,11 @@ const iconMap = new Map<string, React.ReactElement>([
     ['angular', <FaAngular key="angular" className="w-4 h-4" />],
 
     // Backend
+    // For C#
     ['java', <FaJava key="java" className="w-4 h-4" />],
+    // ['c#', <S key="csharp" className="w-4 h-4" /> ],÷
+    ['asp.net', <SiDotnet key="dotnet" className="w-4 h-4" />],
+    ['asp.net', <SiDotnet key="dotnet" className="w-4 h-4" />],
     ['python', <FaPython key="python" className="w-4 h-4" />],
     ['django', <FaPython key="django" className="w-4 h-4" />], // No direct icon, using Python
     ['spring boot', <SiSpringboot key="springboot" className="w-4 h-4" />],
@@ -63,6 +68,7 @@ const iconMap = new Map<string, React.ReactElement>([
     // Databases
     ['sql', <FaDatabase key="sql" className="w-4 h-4" />], // Generic
     ['mysql', <FaDatabase key="mysql" className="w-4 h-4" />], // Generic
+    ['sql server', <FaDatabase key="mysql" className="w-4 h-4" />], // Generic
     ['postgresql', <FaDatabase key="postgresql" className="w-4 h-4" />], // Generic
 
     // Tools & DevOps
