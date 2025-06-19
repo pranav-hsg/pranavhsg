@@ -1,3 +1,4 @@
+import { siteConfig } from "../config/config";
 import Blog from "./blog";
 export const metadata = {
     title: "Blog | Pranav H S",
@@ -5,11 +6,11 @@ export const metadata = {
     openGraph: {
         title: "Blog | Pranav H S",
         description: "Explore my thoughts on coding, best practices, and industry trends in web development, JavaScript, and backend technologies.",
-        url: "https://pranavhsg.com/blog",
+        url: siteConfig.domainURL + "blog",
         siteName: "Pranav H S | Full-Stack Developer",
         images: [
             {
-                url: "https://pranavhsg.com/images/default-og-image.png",
+                url: siteConfig.domainURL + "images/default-og-image.png",
                 width: 1200,
                 height: 630,
                 alt: "Pranav H S Blog",

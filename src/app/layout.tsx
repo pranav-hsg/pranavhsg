@@ -5,6 +5,7 @@ import Header from "./header";
 import { NotificationContainerComponent } from "@/context/notification-context";
 import { Footer } from "./footer";
 import Script from "next/script";
+import { siteConfig } from "./config/config";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -22,11 +23,11 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Pranav H S | Full-Stack Developer",
     description: "Crafting high-performance web applications with Angular, Spring Boot, and Next.js. Check out my work and open-source contributions!",
-    url: "https://pranavhsg.com",
+    url: siteConfig.domainURL,
     siteName: "Pranav H S | Full-Stack Developer",
     images: [
       {
-        url: "https://pranavhsg.com/images/default-og-image.png",
+        url: siteConfig.domainURL + "images/default-og-image.png",
         width: 1200,
         height: 630,
         alt: "Pranav H S Portfolio",
@@ -48,7 +49,7 @@ export default function RootLayout({
         "@context": "https://schema.org",
         "@type": "WebSite",
         "name": "Pranav H S | Full-Stack Developer",
-        "url": "https://pranavhsg.com",
+        "url": siteConfig.domainURL,
         "author": {
           "@type": "Person",
           "name": "Pranav H S"

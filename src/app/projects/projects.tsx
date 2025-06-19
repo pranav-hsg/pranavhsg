@@ -30,7 +30,21 @@ const Projects = () => {
             impact: "Downloaded 300+ times on NPM.",
             techStack: ["React", "JavaScript", "NPM"],
             link: "https://www.npmjs.com/package/autogapslider",
+        },
+        {
+            title: "Kashvi - Kannada Voice Assistant",
+            description: "An intelligent voice assistant that understands and responds to commands in Kannada, designed to perform various tasks using speech recognition and natural language processing.",
+            keyFeatures: [
+                "Understands local language voice commands",
+                "Performs tasks like opening apps and answering queries",
+                "Text-to-speech and speech-to-text integration",
+                "Modular and extensible architecture",
+            ],
+            impact: "Presented in college demo & got appreciated for promoting regional language tech adoption.",
+            techStack: ["Python", "Speech Recognition", "gTTS", "Web Scraping"],
+            link: "https://github.com/pranav-kirsur/kashvi-voice-assistant" // change this if your repo link is different
         }
+
     ];
 
     // const [expandedFeatures, setExpandedFeatures] = useState<{ [key: string]: boolean }>({});

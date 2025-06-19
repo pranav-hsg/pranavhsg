@@ -1,5 +1,6 @@
 import { FloatingCircles } from "@/utils/floating-circles";
 import { findFaIcon } from "@/utils/icon-util";
+import { siteConfig } from "../config/config";
 
 
 export default function MyJourney() {
@@ -7,7 +8,7 @@ export default function MyJourney() {
         {
             company: "Sensei Technologies",
             role: "Full Stack Developer",
-            duration: "April 2022 - Present",
+            duration: "April 2022 - 2025",
             date: "Present",
             description: "Developed 10+ end-to-end CRUD screens using Spring Boot and Angular. Optimized API performance, engineered a WhatsApp notification system, and contributed to Spring Data JPA.",
             techStack: ["Java", "Spring Boot", "Angular", "MySQL", "Docker"],
@@ -15,7 +16,7 @@ export default function MyJourney() {
         {
             "company": "Personal Project",
             "role": "Developer - PranavHSG.com",
-            "url": "https://pranavhsg.com",
+            "url": siteConfig.domainURL,
             "duration": "March 2025",
             "date": "Mar 2025",
             "description": "Built the site you are seeing now, PranavHSG.com, using Next.js and deployed it successfully. It features SEO-optimized pages, ensuring better visibility and performance.",

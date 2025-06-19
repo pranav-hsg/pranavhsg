@@ -1,3 +1,4 @@
+import { siteConfig } from "../config/config";
 import Contact from "./contact";
 export const metadata = {
     title: "Contact | Pranav H S",
@@ -5,11 +6,11 @@ export const metadata = {
     openGraph: {
         title: "Contact | Pranav H S",
         description: "Reach out to me for freelance projects, job opportunities, or technical discussions.",
-        url: "https://pranavhsg.com/contact",
+        url: siteConfig.domainURL + "contact",
         siteName: "Pranav H S | Full-Stack Developer",
         images: [
             {
-                url: "https://pranavhsg.com/images/default-og-image.png",
+                url: siteConfig.domainURL + "images/default-og-image.png",
                 width: 1200,
                 height: 630,
                 alt: "Pranav H S Contact",

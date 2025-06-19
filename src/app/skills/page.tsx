@@ -1,3 +1,4 @@
+import { siteConfig } from "../config/config";
 import Skills from "./skills";
 export const metadata = {
     title: "Skills | Pranav H S",
@@ -5,11 +6,11 @@ export const metadata = {
     openGraph: {
         title: "Skills | Pranav H S",
         description: "Explore my expertise in Angular, Spring Boot, Next.js, and other cutting-edge technologies.",
-        url: "https://pranavhsg.com/skills",
+        url: siteConfig.domainURL + "skills",
         siteName: "Pranav H S | Full-Stack Developer",
         images: [
             {
-                url: "https://pranavhsg.com/images/default-og-image.png",
+                url: siteConfig.domainURL + "images/default-og-image.png",
                 width: 1200,
                 height: 630,
                 alt: "Pranav H S Skills",
