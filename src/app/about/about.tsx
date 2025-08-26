@@ -5,13 +5,16 @@ export default function About() {
             {/* Hero Section */}
             <div className="container mx-auto px-6 py-16 flex flex-col md:flex-row items-center gap-10">
                 {/* Image */}
-                <div className="md:w-1/3">
+                <div className="md:w-1/3" >
                     <Image
-                        height={260}
-                        width={200}
-                        src="/images/pranav.jpeg"
+                        height={312}
+
+                        width={310}
+                        src="/images/pranav.jpg"
                         alt="Pranav HS"
                         className="w-full rounded-2xl shadow-lg"
+                        placeholder="blur"
+                        blurDataURL='/images/pranavlqip.webp'
                     />
                 </div>
 

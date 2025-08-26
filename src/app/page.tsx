@@ -19,7 +19,7 @@ const Home = () => {
 
       {/* Profile Image */}
       <div className="w-40 h-40 rounded-full overflow-hidden border-4 border-white/80 shadow-2xl transition-transform duration-300">
-        <Image height={260} width={200} src="/images/pranav.jpeg" alt="Pranav HS" className="object-cover w-full h-full" />
+        <Image height={260} width={200} placeholder="blur" src="/images/i2.jpg" alt="Pranav HS" className="object-cover w-full h-full" blurDataURL='/images/bluri2.webp' />
       </div>
 
       {/* Name & Description */}
